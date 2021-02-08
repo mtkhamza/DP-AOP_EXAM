@@ -1,10 +1,13 @@
-package ma.dp.Exam.entities;
+package ma.dp.entities;
 
-import ma.dp.Exam.Strategy.IStrategyTraiter;
+import ma.dp.Strategy.IStrategyTraiter;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
+
+@Component
 public class Dessin {
 
     List<Figure> list = new ArrayList<>();

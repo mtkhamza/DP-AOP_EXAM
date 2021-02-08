@@ -1,6 +1,6 @@
-package ma.dp.Exam.entities;
+package ma.dp.entities;
 
-import ma.dp.Exam.Observable.Observable;
+import ma.dp.Observable.Observable;
 
 import java.util.ArrayList;
 import java.util.List;

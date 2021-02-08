@@ -1,6 +1,6 @@
-package ma.dp.Exam.Observable;
+package ma.dp.Observable;
 
-import ma.dp.Exam.Observer.Observer;
+import ma.dp.Observer.Observer;
 
 public interface Observable {
     public void subscribe(Observer observable);

@@ -1,16 +1,14 @@
-package ma.dp.Exam.entities;
+package ma.dp.entities;
 
-import ma.dp.Exam.Observable.Observable;
+import ma.dp.Observable.Observable;
 
-public class Rectangle extends Figure {
+public class Circle extends Figure {
 
-    private double L;
-    private double H;
+    private double rayon;
 
-    public Rectangle(Point point, double L, double H) {
+    public Circle(Point point, double rayon) {
         super(point);
-        this.L = L;
-        this.H = H;
+        this.rayon = rayon;
     }
 
     @Override
@@ -23,16 +21,16 @@ public class Rectangle extends Figure {
 
     @Override
     public double surface() {
-        return L * H;
+        return Math.PI * Math.pow(rayon, 2);
     }
 
     @Override
     public double perimetre() {
-        return 2 * (L + H);
+        return 2 * Math.PI * rayon;
     }
 
     @Override
     public void draw() {
-        System.out.println("Drawing Rectangle with L : " + L + ", H :" + H + ", Perimetre :" + this.perimetre() + " and Surface :" + this.surface());
+        System.out.println("Drawing cirle with R = " + rayon + ", Surface : " + this.surface() + " and Perimetre :" + this.perimetre());
     }
 }

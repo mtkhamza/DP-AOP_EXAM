@@ -1,7 +1,7 @@
-package ma.dp.Exam.entities;
+package ma.dp.entities;
 
 
-import ma.dp.Exam.Observer.Observer;
+import ma.dp.Observer.Observer;
 
 public abstract class Figure implements Observer {
     public Point point;

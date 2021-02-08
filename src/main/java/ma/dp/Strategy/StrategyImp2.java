@@ -1,4 +1,4 @@
-package ma.dp.Exam.Strategy;
+package ma.dp.Strategy;
 
 public class StrategyImp2 implements IStrategyTraiter{
     @Override

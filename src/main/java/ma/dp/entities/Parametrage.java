@@ -1,8 +1,9 @@
-package ma.dp.Exam.entities;
+package ma.dp.entities;
 
-import ma.dp.Exam.Observable.Observable;
-import ma.dp.Exam.Observer.Observer;
+import ma.dp.Observable.Observable;
+import ma.dp.Observer.Observer;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -11,7 +12,13 @@ public class Parametrage implements Observable {
     private int epaisseurContour;
     private int couleurContour;
     private int couleurRemplissage;
-    List<Observer> observerList;
+    List<Observer> observerList = new ArrayList<>();
+
+    public Parametrage(int ec, int cc, int cr){
+        this.epaisseurContour = ec;
+        this.couleurContour = cc;
+        this.couleurRemplissage =  cr;
+    }
 
     @Override
     public void subscribe(Observer observable) {
@@ -40,5 +47,17 @@ public class Parametrage implements Observable {
 
     public int getEpaisseurContour() {
         return epaisseurContour;
+    }
+
+    public void setCouleurContour(int couleurContour) {
+        this.couleurContour = couleurContour;
+    }
+
+    public void setCouleurRemplissage(int couleurRemplissage) {
+        this.couleurRemplissage = couleurRemplissage;
+    }
+
+    public void setEpaisseurContour(int epaisseurContour) {
+        this.epaisseurContour = epaisseurContour;
     }
 }
