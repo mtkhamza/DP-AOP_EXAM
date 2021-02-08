@@ -1,6 +1,7 @@
 package ma.dp.entities;
 
 import ma.dp.Strategy.IStrategyTraiter;
+import ma.dp.aspects.MyLog;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ public class Dessin {
 
     private IStrategyTraiter iStrategyTraiter;
 
+    @MyLog
     public void addFigure(Figure f){
         System.out.println("Adding  figure ...");
         list.add(f);
@@ -27,5 +29,4 @@ public class Dessin {
             f.draw();
         }
     }
-
 }

@@ -2,10 +2,10 @@ package ma.dp.entities;
 
 import ma.dp.Observable.Observable;
 import ma.dp.Observer.Observer;
+import ma.dp.aspects.MyLog;
 
 import java.util.ArrayList;
 import java.util.List;
-
 
 public class Parametrage implements Observable {
 
@@ -19,7 +19,7 @@ public class Parametrage implements Observable {
         this.couleurContour = cc;
         this.couleurRemplissage =  cr;
     }
-
+    @MyLog
     @Override
     public void subscribe(Observer observable) {
         observerList.add(observable);
@@ -36,7 +36,6 @@ public class Parametrage implements Observable {
             o.update(this);
         }
     }
-
     public int getCouleurContour() {
         return couleurContour;
     }
